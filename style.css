@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #050505;
+  color: white;
+}
+
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;
+  background:
+    radial-gradient(circle at top, rgba(255, 204, 0, 0.22), transparent 35%),
+    linear-gradient(135deg, #050505, #111111 55%, #000000);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    rgba(255,255,255,0.03) 1px,
+    transparent 1px
+  );
+  background-size: 100% 40px;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 850px;
+  z-index: 2;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #f5c400;
+  border-radius: 50px;
+  color: #f5c400;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+h1 {
+  font-size: clamp(42px, 8vw, 90px);
+  line-height: 1;
+  color: #f5c400;
+  text-shadow: 0 0 25px rgba(245, 196, 0, 0.35);
+}
+
+h2 {
+  font-size: clamp(24px, 4vw, 42px);
+  margin-top: 15px;
+}
+
+.tagline {
+  font-size: 22px;
+  margin-top: 12px;
+  color: #ddd;
+  letter-spacing: 1px;
+}
+
+.description {
+  margin: 30px auto;
+  max-width: 650px;
+  line-height: 1.9;
+  font-size: 18px;
+  color: #cfcfcf;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 15px 28px;
+  border-radius: 14px;
+  font-weight: bold;
+  transition: 0.25s;
+}
+
+.primary {
+  background: #f5c400;
+  color: #000;
+}
+
+.secondary {
+  border: 1px solid #f5c400;
+  color: #f5c400;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 70px 8%;
+  background: #080808;
+}
+
+.card {
+  background: #121212;
+  border: 1px solid rgba(245, 196, 0, 0.25);
+  border-radius: 22px;
+  padding: 30px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #f5c400;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.card p {
+  color: #ccc;
+  line-height: 1.8;
+}
+
+.register {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #111, #050505);
+}
+
+.register h2 {
+  color: #f5c400;
+}
+
+.register p {
+  margin: 18px 0 30px;
+  color: #ccc;
+}
+
+.big {
+  display: inline-block;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .details {
+    grid-template-columns: 1fr;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
